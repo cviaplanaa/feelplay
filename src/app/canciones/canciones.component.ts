@@ -1,22 +1,23 @@
 import { Component, OnInit } from '@angular/core';
-import {Cancion} from '../cancion';
+import { Cancion } from '../cancion';
+import { CANCIONES } from '../lista-canciones';
 
 @Component({
   selector: 'app-canciones',
   templateUrl: './canciones.component.html',
   styleUrls: ['./canciones.component.css']
 })
+
 export class CancionesComponent implements OnInit {
-cancion: Cancion={
-  sTitle: 'Isla morenita',
-  author: 'Carlos Sadness',
-  year: '2019',
-  disc: 'Caminando',
-  style: 'indie'
-}
+canciones = CANCIONES;
+selectedSong: Cancion;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSelect(cancion: Cancion): void {
+    this.selectedSong = cancion;
+  }
 }

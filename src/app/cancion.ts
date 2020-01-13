@@ -4,5 +4,6 @@ export class Cancion {
   year: number;
   disc: string;
   style: string;
-
+  prize: string;
+  shows: string;
 }
