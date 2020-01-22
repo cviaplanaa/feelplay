@@ -1,4 +1,5 @@
 export class Cancion {
+  id: number;
   sTitle: string;
   author: string;
   year: number;

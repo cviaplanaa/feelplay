@@ -2,29 +2,11 @@
 <ul class="canciones">
   <!-- Dentro de ngFor las palabras let of permiten indicar qué parametros de cancion buscar en la cadena CANCIONES
 Mientras haya canciones en la array irá creándolas -->
-  <li *ngFor="let cancion of canciones"
-  [class.selected]="cancion === selectedSong"
-  (click)="onSelect(cancion)">
+<app-cancion-search></app-cancion-search>
+  <li *ngFor="let cancion of canciones">
+   <a routerLink="/detail/{{cancion.id}}">
     <span class="badge">{{cancion.sTitle}}</span> - <b>{{cancion.author}}</b> - <i>{{cancion.style}}</i>
+    </a>
   </li>
+  <button (click)="goBack()">Atrás</button>
 </ul>
-<!-- Si una canción está seleccionada muestra todos los detalles que definimos a continuación-->
-<div *ngIf="selectedSong" class="canciones">
-
-  <h2>{{selectedSong.sTitle | uppercase}} Detalles</h2>
-  <div><span class="badgeD"><b>Título: </b></span>{{selectedSong.sTitle}}</div>
-  <div><span class="badgeD"><b>Autor: </b></span>{{selectedSong.author}}</div>
-  <div><span class="badgeD"><b>Estilo: </b></span>{{selectedSong.style}}</div>
-  <div><span class="badgeD"><b>Disco: </b></span>{{selectedSong.disc}}</div>
-  <div><span class="badgeD"><b>Año: </b></span>{{selectedSong.year}}</div>
-  <div><span class="badgeD"><b>Premios: </b></span>{{selectedSong.prize}}</div>
-  <div><span class="badgeD"><b>Conciertos: </b></span>{{selectedSong.shows}}</div>
-</div>
-
-<!-- <div><span><b>Título: </b> </span>{{cancion.sTitle}}</div>
-<div><span><b>Autor: </b> </span>{{cancion.author}}</div>
-<div><span><b>Año: </b> </span>{{cancion.year}}</div>
-<div><span><b>Disco: </b> </span>{{cancion.disc}}</div>
-<div><span><b>Estilo: </b> </span>{{cancion.style}}</div>
-<div><span><b>Premios: </b> </span>{{cancion.prize}}</div>
-<div><span><b>Próximos eventos: </b> </span>{{cancion.shows}}</div> -->

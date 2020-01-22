@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../cancion';
 import { CANCIONES } from '../lista-canciones';
+import { CancionService } from '../cancion.service';
 
 @Component({
   selector: 'app-canciones',
@@ -10,16 +11,18 @@ import { CANCIONES } from '../lista-canciones';
 
 export class CancionesComponent implements OnInit {
   //Creamos una variable de tipo canciones que incluye la array creada en typescript
-canciones = CANCIONES;
-//Creamos la variable selectedSong de tipo cancion para poder mostrar detalles
-selectedSong: Cancion;
+//canciones = CANCIONES;
+canciones: Cancion[];
 
-  constructor() { }
+  constructor(private cancionService: CancionService) { }
 
   ngOnInit() {
+    this.getCanciones();
   }
 
-  onSelect(cancion: Cancion): void {
-    this.selectedSong = cancion;
-  }
+  getCanciones(): void {
+  this.cancionService.getCanciones().subscribe(canciones => this.canciones= canciones);
+}
+
+
 }

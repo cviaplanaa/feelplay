@@ -1,0 +1,13 @@
+<!-- Si una canción está seleccionada muestra todos los detalles que definimos a continuación-->
+<div *ngIf="cancion" class="canciones">
+
+  <h2>{{cancion.sTitle | uppercase}} Detalles</h2>
+  <div><span class="badgeD"><b>Título: </b></span>{{cancion.sTitle}}</div>
+  <div><span class="badgeD"><b>Autor: </b></span>{{cancion.author}}</div>
+  <div><span class="badgeD"><b>Estilo: </b></span>{{cancion.style}}</div>
+  <div><span class="badgeD"><b>Disco: </b></span>{{cancion.disc}}</div>
+  <div><span class="badgeD"><b>Año: </b></span>{{cancion.year}}</div>
+  <div><span class="badgeD"><b>Premios: </b></span>{{cancion.prize}}</div>
+  <div><span class="badgeD"><b>Conciertos: </b></span>{{cancion.shows}}</div>
+  <button (click)="goBack()">Atrás</button>
+</div>
