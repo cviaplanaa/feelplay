@@ -13,6 +13,7 @@ import { CancionesComponent } from './canciones/canciones.component';
 import { CancionDetalleComponent } from './cancion-detalle/cancion-detalle.component';
 import { CancionSearchComponent } from './cancion-search/cancion-search.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { ReproductorComponent } from './reproductor/reproductor.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { InicioComponent } from './inicio/inicio.component';
     CancionesComponent,
     CancionDetalleComponent,
     CancionSearchComponent,
-    InicioComponent
+    InicioComponent,
+    ReproductorComponent
   ],
   imports: [
     BrowserModule,
