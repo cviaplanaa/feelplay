@@ -1,11 +1,12 @@
 <section class="player">
 
   <audio id="medio"   type="audio/mp3">
-    <source src="assets/GetLucky.mp3" type="audio/mp3" >
+
   </audio>
 
-  <div class="contador">
-    <span id="currentTime">00:00</span> / <span id="duration">00:00</span>
+  <div class="contador" id="contador">
+    <span id="minutes">00</span>:<span id="seconds">00</span>
+    <span id="currentTime"></span> / <span id="duration">00:00</span>
   </div>
 
   <nav>
@@ -17,8 +18,8 @@
     </div>
 
     <button class="Play"type="button" name="Play" (click)="reproducir()"></button>
-    <button class="Pause"type="button" name="Pause"></button>
-    <button class="Stop"type="button" name="Stop"></button>
+    <button class="Pause"type="button" name="Pause" (click)="pausa()"></button>
+    <button class="Stop"type="button" name="Stop" (click)="stop()"></button>
 
 
   </nav>
