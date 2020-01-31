@@ -12,8 +12,7 @@ audio;
 
   reproducir() {
     this.audio.play();
-
-
+    
     var minutos = Math.round(this.audio.duration/60);
     var segundos = Math.round(((this.audio.duration/60)-minutos)*60);
     var Sminutos = minutos.toString();
@@ -26,7 +25,6 @@ audio;
 
 }
 
-
   pausa(){
     this.audio.pause();
   }
@@ -35,10 +33,6 @@ audio;
   this.audio.pause();
   this.audio.currentTime = 0;
   }
-
-
-
-
 
   constructor() {
     this.audio = new Audio('assets/GetLucky.mp3');

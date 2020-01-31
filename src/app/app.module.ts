@@ -15,6 +15,12 @@ import { CancionSearchComponent } from './cancion-search/cancion-search.componen
 import { InicioComponent } from './inicio/inicio.component';
 import { ReproductorComponent } from './reproductor/reproductor.component';
 
+//Import de angular material
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatListModule} from '@angular/material/list';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +34,8 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    MatInputModule,
+    MatListModule,
     HttpClientModule,
 
 // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
@@ -35,7 +43,9 @@ import { ReproductorComponent } from './reproductor/reproductor.component';
 // Remove it when a real server is ready to receive requests.
 HttpClientInMemoryWebApiModule.forRoot(
   InMemoryDataService, { dataEncapsulation: false }
-)
+),
+
+BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

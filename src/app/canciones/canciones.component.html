@@ -3,10 +3,14 @@
   <!-- Dentro de ngFor las palabras let of permiten indicar qué parametros de cancion buscar en la cadena CANCIONES
 Mientras haya canciones en la array irá creándolas -->
 <app-cancion-search></app-cancion-search>
-  <li *ngFor="let cancion of canciones">
+<mat-list>
+  <mat-list-item *ngFor="let cancion of canciones">
    <a routerLink="/detail/{{cancion.id}}">
+
     <span class="badge">{{cancion.sTitle}}</span> - <b>{{cancion.author}}</b> - <i>{{cancion.style}}</i>
+
     </a>
-  </li>
+  </mat-list-item>
+  </mat-list>
   <button (click)="goBack()">Atrás</button>
 </ul>
