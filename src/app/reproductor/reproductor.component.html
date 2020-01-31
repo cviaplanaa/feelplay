@@ -1,27 +1,24 @@
 <section class="player">
 
-  <audio id="medio"   type="audio/mp3">
+  <audio id="medio" type="audio/mp3">
 
   </audio>
 
-  <div class="contador" id="contador">
-    <!--<Timer><span id="minutes">00</span>:<span id="seconds">00</span></Timer>-->
-    <span id="paso">00:00</span> / <span id="duration">00:00</span>
-  </div>
-
   <nav>
 
-
-
-    <div class="barra">
-      <div class="progreso">
-        <div class="posicion"></div>
-      </div>
+    <input class="slider" id="slider" style="width: 200px;" type="range" min="1" max="{{MAXsongTimeBar}}" value="{{songTimeBar}}" (change)="getSliderValue($event)" (oninput)="getSliderValue($event)">
+    <div class="contador">
+      <span id="paso">{{songTimeChrono}}</span>/<span id="duration">{{MaxsongTimeChrono}}</span>
     </div>
+    <br style="height: 20px;">
 
-    <button class="Play"type="button" name="Play" (click)="reproducir()"></button>
-    <button class="Pause"type="button" name="Pause" (click)="pausa()"></button>
-    <button class="Stop"type="button" name="Stop" (click)="stop()"></button>
+    <div class ="buttons">
 
+    <button mat-icon-button (click)="reproducir()" ><i class="material-icons">play_circle_outline</i></button>
 
+    <button mat-icon-button (click)="pausa()" ><i class="material-icons">pause_circle_outline</i></button>
+
+    <button mat-icon-button (click)="stop()" ><i class="material-icons">stop</i></button>
+
+    </div>
   </nav>

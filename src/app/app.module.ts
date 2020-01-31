@@ -20,7 +20,9 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatInputModule} from '@angular/material/input';
-
+import {MatButtonModule} from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+import {MatIconModule} from '@angular/material/icon';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +38,11 @@ import {MatInputModule} from '@angular/material/input';
     FormsModule,
     MatInputModule,
     MatListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatSliderModule,
     HttpClientModule,
+
 
 // The HttpClientInMemoryWebApiModule module intercepts HTTP requests
 // and returns simulated server responses.
