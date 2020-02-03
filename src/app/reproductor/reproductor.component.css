@@ -10,18 +10,15 @@
 }
 
 .slider{
+  top: -1em;
   align-content: center;
   width: 6em;
-  background-color: #FFFFFF;
-  font-size: 11px;
-  font-style: bold;
-  border-radius: 4px;
-  left: 6em;
+  left: 7em;
   position: relative;
 }
 
 .contador{
-  top: -2.1em;
+  top: -4.2em;
   width: 6em;
   background-color: #FFF;
   font-size: 11px;
@@ -34,7 +31,7 @@
 
 
 .buttons{
-  top: -3.2em;
+  top: -4.5em;
   position: relative;
   left:8em;
 

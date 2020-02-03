@@ -6,7 +6,9 @@
 
   <nav>
 
-    <input class="slider" id="slider" style="width: 200px;" type="range" min="1" max="{{MAXsongTimeBar}}" value="{{songTimeBar}}" (change)="getSliderValue($event)" (oninput)="getSliderValue($event)">
+
+    <mat-slider class="slider" color = "warn" min="0" max="{{MAXsongTimeBar}}"  value="{{songTimeBar}}"  (change)="onSliderChange($event)" (input)="onSliderChange($event)"></mat-slider>
+
     <div class="contador">
       <span id="paso">{{songTimeChrono}}</span>/<span id="duration">{{MaxsongTimeChrono}}</span>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, MatSliderChange, OnInit } from '@angular/core';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class ReproductorComponent implements OnInit {
 
   reproducir() {
     this.audio.play();
+
     var minutos = Math.round(this.audio.duration/60);
     var segundos = Math.round(((this.audio.duration/60)-minutos)*60);
     var Sminutos = minutos.toString();
@@ -26,6 +27,7 @@ export class ReproductorComponent implements OnInit {
     Ssegundos = "0" + Ssegundos;
     this.MaxsongTimeChrono = Sminutos + ":" + Ssegundos;
     document.getElementById("duration").innerHTML = this.MaxsongTimeChrono
+
     this.audio.addEventListener("timeupdate", (currentTime)=>{
         this.MAXsongTimeBar = this.audio.duration;
         this.songTimeBar = this.songTimeBar;
@@ -42,9 +44,9 @@ export class ReproductorComponent implements OnInit {
     });
   }
 
-  getSliderValue(event) {
-    this.audio.currentTime = (<HTMLInputElement>document.getElementById("slider")).value;
- }
+  onSliderChange(event: MatSliderChange) {
+     this.audio.currentTime = (event.value);
+   }
 
   pausa(){
     this.audio.pause();
