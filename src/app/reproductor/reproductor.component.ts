@@ -44,7 +44,7 @@ export class ReproductorComponent implements OnInit {
     });
   }
 
-  onSliderChange(event: MatSliderChange) {
+  onSliderChange(event) {
      this.audio.currentTime = (event.value);
    }
 
