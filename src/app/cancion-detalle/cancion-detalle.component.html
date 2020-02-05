@@ -2,12 +2,23 @@
 <div *ngIf="cancion" class="canciones">
 
   <h2>{{cancion.sTitle | uppercase}} Detalles</h2>
-  <div><span class="badgeD"><b>Título: </b></span>{{cancion.sTitle}}</div>
-  <div><span class="badgeD"><b>Autor: </b></span>{{cancion.author}}</div>
-  <div><span class="badgeD"><b>Estilo: </b></span>{{cancion.style}}</div>
-  <div><span class="badgeD"><b>Disco: </b></span>{{cancion.disc}}</div>
-  <div><span class="badgeD"><b>Año: </b></span>{{cancion.year}}</div>
-  <div><span class="badgeD"><b>Premios: </b></span>{{cancion.prize}}</div>
-  <div><span class="badgeD"><b>Conciertos: </b></span>{{cancion.shows}}</div>
-  <button (click)="goBack()">Atrás</button>
+  <mat-radio-group><div><span class="badgeD"><mat-radio-button value="1"><b>Título: </b></mat-radio-button></span>{{cancion.sTitle}}</div></mat-radio-group>
+  <div><span class="badgeD"><mat-checkbox><b>Autor: </b></mat-checkbox></span>{{cancion.author}}</div>
+  <div><span class="badgeD"><mat-checkbox><b>Disco: </b></mat-checkbox></span>{{cancion.disc}}</div>
+  <div><span class="badgeD"><mat-checkbox><b>Premios: </b></mat-checkbox></span>{{cancion.prize}}</div>
+  <div><span class="badgeD"><mat-checkbox><b>Conciertos: </b></mat-checkbox></span>{{cancion.shows}}</div>
+  <div><span class="badgeD"><mat-checkbox><b>Año: </b></mat-checkbox></span>{{cancion.year}}</div>
+  <div><span class="badgeD"><mat-slide-toggle><b>Estilo: </b></mat-slide-toggle></span>{{cancion.style}}</div>
+
+  <br>
+  <span>¿Cuánto <b>te gusta</b> la aplicación? </span><mat-slider></mat-slider>
+  <br>
+  <hr>
+  <span> <i>Comparte tu opinión sobre esta canción con la comunidad </i></span>
+  <form class="example-form">
+  <mat-form-field class="example-full-width">
+    <textarea matInput placeholder="Deja un comentario"></textarea>
+  </mat-form-field>
+</form>
+  <button mat-raised-button color="primary" (click)="goBack()">Atrás</button>
 </div>

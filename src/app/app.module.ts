@@ -24,6 +24,10 @@ import {MatButtonModule} from '@angular/material/button';
 import { MatSliderModule } from '@angular/material/slider';
 import {MatIconModule} from '@angular/material/icon';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -42,8 +46,13 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatListModule,
     MatButtonModule,
     MatIconModule,
+    MatCheckboxModule,
+    MatCardModule,
     MatProgressBarModule,
+    MatDatepickerModule,
+    MatRadioModule,
     MatSliderModule,
+    MatSlideToggleModule,
     HttpClientModule,
 
 

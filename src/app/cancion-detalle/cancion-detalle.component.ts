@@ -5,6 +5,9 @@ import { Location } from '@angular/common';
 import { Cancion } from '../cancion';
 import { CancionService }  from '../cancion.service';
 
+//Checkbox FormControl agrupar múltiple selección
+import {FormControl} from '@angular/forms';
+
 @Component({
   selector: 'app-cancion-detalle',
   templateUrl: './cancion-detalle.component.html',

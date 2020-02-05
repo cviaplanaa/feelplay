@@ -7,10 +7,12 @@ Mientras haya canciones en la array irá creándolas -->
   <mat-list-item *ngFor="let cancion of canciones">
    <a routerLink="/detail/{{cancion.id}}">
 
-    <span class="badge">{{cancion.sTitle}}</span> - <b>{{cancion.author}}</b> - <i>{{cancion.style}}</i>
+    <mat-icon>music_note</mat-icon><span class="badge"> {{cancion.sTitle}}</span> - <b>{{cancion.author}}</b> - <i>{{cancion.style}}</i>
 
     </a>
   </mat-list-item>
   </mat-list>
-  <button (click)="goBack()">Atrás</button>
+  <br>
+  <mat-card>Aplicación creada con Angular con mucho amor</mat-card>
+  <button mat-raised-button color="primary" (click)="goBack()">Atrás</button>
 </ul>
