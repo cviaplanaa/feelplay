@@ -20,6 +20,7 @@ export class CancionDetalleComponent implements OnInit {
     private cancionService: CancionService,
     private location: Location
   ) {}
+  
 
   ngOnInit(): void {
   this.getCancion();
@@ -34,5 +35,4 @@ getCancion(): void {
   goBack(): void {
     this.location.back();
   }
-
 }

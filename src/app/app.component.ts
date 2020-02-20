@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,4 +11,9 @@ export class AppComponent {
   title = 'FeelPlay';
   titleSongList = 'Lista canciones';
   titleSong = 'Sonando';
+
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.items = db.collection('canciones').valueChanges();
+  }
 }

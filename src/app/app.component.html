@@ -24,9 +24,20 @@
 </nav>
   <router-outlet></router-outlet>
 
+  <h3>Aquí va la lista de detalles de canciones de Firebase:</h3>
+  <br>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.author}}
+        {{item.sTitle}}
+      </li>
+    </ul>
+<br>
+
   <!-- Insertamos el componente reproductor en la aplicación-->
 
 <app-reproductor></app-reproductor>
+
 
 <br>
 <br>

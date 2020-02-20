@@ -3,7 +3,18 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: "AIzaSyDEe_MyLsezBB1JmOEGCxTtyb2xsw-J5HU",
+  authDomain: "feelplay-app.firebaseapp.com",
+  databaseURL: "https://feelplay-app.firebaseio.com",
+  projectId: "feelplay-app",
+  storageBucket: "feelplay-app.appspot.com",
+  messagingSenderId: "1083386748694",
+  appId: "1:1083386748694:web:13ceb20e382fb8c5653a37",
+  measurementId: "G-9HE4KPYX4B"
+
+  }
 };
 
 /*

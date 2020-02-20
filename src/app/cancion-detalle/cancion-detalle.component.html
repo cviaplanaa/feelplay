@@ -10,6 +10,16 @@
   <div><span class="badgeD"><mat-checkbox><b>Año: </b></mat-checkbox></span>{{cancion.year}}</div>
   <div><span class="badgeD"><mat-slide-toggle><b>Estilo: </b></mat-slide-toggle></span>{{cancion.style}}</div>
 
+  <h3>Aquí va la lista de detalles de canciones de Firebase:</h3>
+  <br>
+    <ul>
+      <li class="text" *ngFor="let item of items | async">
+        {{item.author}}
+        {{item.sTitle}}
+      </li>
+    </ul>
+<br>
+
   <br>
   <span>¿Cuánto <b>te gusta</b> la aplicación? </span><mat-slider></mat-slider>
   <br>
