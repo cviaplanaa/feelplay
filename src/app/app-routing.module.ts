@@ -8,7 +8,7 @@ import { CancionDetalleComponent }   from './cancion-detalle/cancion-detalle.com
 const routes: Routes = [
   { path: 'canciones', component: CancionesComponent },
   { path: 'inicio', component: InicioComponent },
-  { path: '', redirectTo: '/inicio', pathMatch: 'full' },
+  { path: '', redirectTo: '/', pathMatch: 'full' },
   { path: 'detail/:id', component: CancionDetalleComponent }
 ];
 

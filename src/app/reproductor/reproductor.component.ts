@@ -59,8 +59,12 @@ export class ReproductorComponent implements OnInit {
   this.audio.currentTime = 0;
   }
 
+  setAudio(ruta){
+    this.audio = new Audio(ruta);
+  }
+
   constructor() {
-    this.audio = new Audio('assets/GetLucky.mp3');
+    this.audio = new Audio('https://firebasestorage.googleapis.com/v0/b/feelplay-app.appspot.com/o/GetLucky.mp3?alt=media&token=59acfd52-ea7d-407d-b82d-9ac1e754d78f');
   }
 
   ngOnInit() {

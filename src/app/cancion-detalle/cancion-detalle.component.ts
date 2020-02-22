@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
 import { Cancion } from '../cancion';
 import { CancionService }  from '../cancion.service';
@@ -15,12 +17,14 @@ import {FormControl} from '@angular/forms';
 })
 export class CancionDetalleComponent implements OnInit {
 @Input() cancion: Cancion;
-  constructor(
+
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore,
     private route: ActivatedRoute,
     private cancionService: CancionService,
-    private location: Location
-  ) {}
-  
+    private location: Location) {
+    this.items = db.collection('canciones').valueChanges();
+  }
 
   ngOnInit(): void {
   this.getCancion();

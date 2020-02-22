@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Cancion } from '../cancion';
+import { Location } from '@angular/common';
 import { CancionService } from '../cancion.service';
+import { AngularFirestore } from 'angularfire2/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-canciones',
@@ -13,7 +16,10 @@ export class CancionesComponent implements OnInit {
 //canciones = CANCIONES;
 canciones: Cancion[];
 
-  constructor(private cancionService: CancionService) { }
+  items: Observable<any[]>;
+  constructor(db: AngularFirestore, private cancionService: CancionService, private location: Location) {
+    this.items = db.collection('canciones').valueChanges();
+  }
 
   ngOnInit() {
     this.getCanciones();
@@ -21,6 +27,9 @@ canciones: Cancion[];
 
   getCanciones(): void {
   this.cancionService.getCanciones().subscribe(canciones => this.canciones= canciones);
+}
+goBack(): void {
+  this.location.back();
 }
 
 
