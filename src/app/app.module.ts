@@ -36,6 +36,7 @@ import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { LoginComponent } from './components/login/login.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { AngularFireAuthModule } from 'angularfire2/auth';
     CancionDetalleComponent,
     CancionSearchComponent,
     InicioComponent,
-    ReproductorComponent
+    ReproductorComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
