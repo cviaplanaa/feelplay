@@ -7,7 +7,7 @@ Mientras haya canciones en la array irá creándolas -->
 <mat-list>
   <mat-list-item *ngFor="let item of items | async">
     <a routerLink="/detail/{{item.id}}">
-      <mat-icon>music_note</mat-icon><span class="badge">{{item.sTitle}}</span> - <b>{{item.author}}</b> - <i>{{item.style}}</i>
+      <mat-icon>music_note</mat-icon>{{item.sTitle}}- <b>{{item.author}}</b> - <i>{{item.style}}</i>
     </a>
   </mat-list-item>
 </mat-list>
