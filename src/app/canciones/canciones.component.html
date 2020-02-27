@@ -5,9 +5,14 @@ Mientras haya canciones en la array irá creándolas -->
 <app-cancion-search></app-cancion-search>
 
 <mat-list>
-  <mat-list-item *ngFor="let item of items | async">
-    <a routerLink="/detail/{{item.id}}">
-      <mat-icon>music_note</mat-icon>{{item.sTitle}}- <b>{{item.author}}</b> - <i>{{item.style}}</i>
+  <mat-list-item *ngFor="let cancion of canciones | async, index as i">
+  <!--
+    <h6>{{item.sTitle}}</h6>
+    <h6>{{item.author}}</h6>
+    <h6>{{item.style}}</h6>
+  -->
+    <a [routerLink] = "['/detail/', i]">
+      <mat-icon>music_note</mat-icon>{{cancion.sTitle}}- <b>{{cancion.author}}</b> - <i>{{cancion.style}}</i>
     </a>
   </mat-list-item>
 </mat-list>

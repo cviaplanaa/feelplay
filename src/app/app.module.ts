@@ -30,13 +30,15 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatCardModule} from '@angular/material/card';
 
 // Import firebase
-
 import { AngularFireModule } from 'angularfire2';
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { LoginComponent } from './components/login/login.component';
+
+// Servicios
+import { TestsongService } from './services/testsong.service';
 
 @NgModule({
   declarations: [
@@ -78,7 +80,9 @@ HttpClientInMemoryWebApiModule.forRoot(
 
 BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    TestsongService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

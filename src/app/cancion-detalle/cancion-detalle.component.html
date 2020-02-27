@@ -1,4 +1,10 @@
 <!-- Si una canción está seleccionada muestra todos los detalles que definimos a continuación-->
+<div>
+    <h3>Título: {{cancion.sTitle}}</h3>
+    <p>Author: {{cancion.author}}</p>
+    <p>Género: {{cancion.style}}</p>
+</div>
+<!--
 <div *ngIf="cancion" class="canciones">
 
   <h2>{{cancion.sTitle | uppercase}} Detalles</h2>
@@ -9,11 +15,12 @@
   <div><span class="badgeD"><mat-checkbox><b>Conciertos: </b></mat-checkbox></span>{{cancion.shows}}</div>
   <div><span class="badgeD"><mat-checkbox><b>Año: </b></mat-checkbox></span>{{cancion.year}}</div>
   <div><span class="badgeD"><mat-slide-toggle><b>Estilo: </b></mat-slide-toggle></span>{{cancion.style}}</div>
-  
   <br>
   <span>¿Cuánto <b>te gusta</b> la aplicación? </span><mat-slider></mat-slider>
+-->
   <br>
   <hr>
+  <br>
   <span> <i>Comparte tu opinión sobre esta canción con la comunidad </i></span>
   <form class="example-form">
   <mat-form-field class="example-full-width">
@@ -21,4 +28,3 @@
   </mat-form-field>
 </form>
   <button mat-raised-button color="primary" (click)="goBack()">Atrás</button>
-</div>
