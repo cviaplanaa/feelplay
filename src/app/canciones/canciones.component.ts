@@ -13,19 +13,31 @@ import { Observable } from 'rxjs';
 })
 
 export class CancionesComponent implements OnInit {
+  
+  canciones: any;
 
-  canciones: Observable<any[]>;
-  //item: any[] = [];
+  //canciones: Observable<any[]>;  
 
   constructor(
     private _servicio: TestsongService,
     private location: Location
   ) {
-    this.canciones = _servicio.getSongs();
+    this._servicio.getSongs().subscribe(cancion=>{
+      this.canciones = cancion;
+      console.log(this.canciones)
+    })
    }
 
   ngOnInit() {
     //this.getCanciones();
+  }
+
+  eliminar(cancion){
+    this._servicio.deleteCancion(cancion);
+  }
+
+  editar(cancion){
+    
   }
 /*
   getCanciones(): void {

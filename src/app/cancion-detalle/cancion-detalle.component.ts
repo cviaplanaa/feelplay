@@ -34,6 +34,8 @@ export class CancionDetalleComponent implements OnInit {
     })
    }
 
+   
+
   ngOnInit(): void {
     //this.getCancion();
   }

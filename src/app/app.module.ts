@@ -39,6 +39,9 @@ import { LoginComponent } from './components/login/login.component';
 
 // Servicios
 import { TestsongService } from './services/testsong.service';
+import { CancionAddComponent } from './components/cancion-add/cancion-add.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +51,10 @@ import { TestsongService } from './services/testsong.service';
     CancionSearchComponent,
     InicioComponent,
     ReproductorComponent,
-    LoginComponent
+    LoginComponent,
+    CancionAddComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,8 @@
+<form (ngSubmit)="addCancion()">
+    <input
+     type="text" placeholder="Inserta título canción" 
+     name="sTitle" class="form-control"
+     [(ngModel)] = "cancion.sTitle"
+     >
+    <button class="btn btn-warning mt-3" type="submit">Agregar</button>
+</form>

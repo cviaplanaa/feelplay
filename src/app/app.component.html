@@ -1,35 +1,26 @@
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <img
-    width="40"
-    alt="Feelplay"
-    src="https://i.ibb.co/4P7pLTW/logo.png"
-  />
+<div class="container">
+  <app-header></app-header>
+</div>
+
+<!--
+<div class="toolbar" role="banner">  
   <span>Inicio</span>
-      <div class="spacerToolbar"></div>
+  <div class="spacerToolbar"></div>
   <a href="canciones/canciones.component.html"><span class="toolbar">Canciones</span></a>
     <div class="spacer"></div>
 </div>
+-->
 
 <div class="content" role="main">
 
-  <!-- Highlight Card -->
-  <div class="card highlight-card card-small">
-    <h1>{{ title }} </h1>
-  </div>
-  <!-- Insertamos el routerlink canciones-->
+  <!-- Insertamos el routerlink canciones
   <nav>
   <a routerLink="/inicio">Inicio</a>
   <a routerLink="/canciones">Lista de canciones</a>
-</nav>
+</nav>-->
 
   <router-outlet></router-outlet>
 
-  <!-- Insertamos el componente reproductor en la aplicación-->
-  <app-reproductor></app-reproductor>
-  <br>
-  <br>
-  <br>
-    <span> <i>By: Grupo MimeticCode</i> </span>
-    
+  <app-footer></app-footer>  
 </div>

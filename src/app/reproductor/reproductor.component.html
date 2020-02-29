@@ -1,13 +1,12 @@
-<section class="player">
+<section class="player center-block">
 
-  <audio id="medio" type="audio/mp3">
+  <audio id="medio" type="audio/mp3"></audio>
 
-  </audio>
+  <div>
 
-  <nav>
-
-
-    <mat-slider class="slider" color = "warn" min="0" max="{{MAXsongTimeBar}}"  value="{{songTimeBar}}"  (change)="onSliderChange($event)" (input)="onSliderChange($event)"></mat-slider>
+    <mat-slider class="slider" color = "warn" min="0" max="{{MAXsongTimeBar}}"  value="{{songTimeBar}}"  
+      (change)="onSliderChange($event)" (input)="onSliderChange($event)">
+    </mat-slider>
 
     <div class="contador">
       <span id="paso">{{songTimeChrono}}</span>/<span id="duration">{{MaxsongTimeChrono}}</span>
@@ -23,4 +22,5 @@
     <button mat-icon-button (click)="stop()" ><i class="material-icons">stop</i></button>
 
     </div>
-  </nav>
+  </div>
+</section>

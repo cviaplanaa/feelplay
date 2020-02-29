@@ -1,5 +1,5 @@
 <!-- Si una canción está seleccionada muestra todos los detalles que definimos a continuación-->
-<div>
+<div *ngIf = cancion>
     <h3>Título: {{cancion.sTitle}}</h3>
     <p>Author: {{cancion.author}}</p>
     <p>Género: {{cancion.style}}</p>
